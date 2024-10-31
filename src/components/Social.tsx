@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { FaGithub, FaLinkedin, FaTelegram, FaFacebook } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTelegram, FaInstagram } from "react-icons/fa";
 
 type socialsType = {
     icon: React.JSX.Element;
@@ -14,10 +14,10 @@ interface SocialProps {
 }
 
 const socials: socialsType[] = [
-    { icon: <FaGithub/>, path: ""},
-    { icon: <FaLinkedin/>, path: ""},
-    { icon: <FaTelegram/>, path: ""},
-    { icon: <FaFacebook/>, path: ""},
+    { icon: <FaGithub/>, path: "https://github.com/bekturb"},
+    { icon: <FaLinkedin/>, path: "https://linkedin.com/in/bektursun-baimamatov-764315278"},
+    { icon: <FaTelegram/>, path: "https://t.me/beka_baitur"},
+    { icon: <FaInstagram/>, path: "https://www.instagram.com/bektursun_baimamatov"},
 ]
 
 const Social = ({containerStyles, iconStyles}: SocialProps) => {

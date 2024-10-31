@@ -1,9 +1,20 @@
+"use client";
+
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
+import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 
 export default function Home() {
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/assets/resume.pdf';
+    link.download = 'resume.pdf';
+    link.click();
+  };
+
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
@@ -22,6 +33,7 @@ export default function Home() {
               <Button
                 variant="outline"
                 size="lg"
+                onClick={handleDownload}
                 className="uppercase flex items-center gap-2 hover:text-primary"
               >
                 <span>Download CV</span>
@@ -41,6 +53,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Stats />
     </section>
   );
 }
