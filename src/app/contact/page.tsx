@@ -36,8 +36,6 @@ const Contact = () => {
 
   const url = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
 
-  console.log(telegramBotToken, "telegramBotToken")
-
   try {
     await axios.post(url, {
       chat_id: telegramChatId,
@@ -51,7 +49,7 @@ const Contact = () => {
     });
     toast.success('Message sent successfully!');
   } catch (error) {
-    toast.error('Failed to send message.');
+    toast.error(error);
   }
   };
 
