@@ -48,8 +48,8 @@ const Contact = () => {
       `,
     });
     toast.success('Message sent successfully!');
-  } catch (error) {
-    toast.error(error);
+  } catch (error: any) {
+    toast.error(error.message);
   }
   };
 
