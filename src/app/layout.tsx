@@ -3,6 +3,7 @@ import { JetBrains_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 const jetbrainsMono = JetBrains_Mono({
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={jetbrainsMono.variable}>
         <Header />
+        <Toaster />
         <StairTransition />
         <PageTransition>
           {children}

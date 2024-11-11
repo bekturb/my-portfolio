@@ -13,64 +13,8 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@radix
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
-
-type stackType = {
-  name: string,
-}
-
-type projectType = {
-  num: string,
-  category: string,
-  title: string,
-  description: string
-  stack: stackType[],
-  image: string,
-  live: string,
-  github: string,
-}
-
-const projects: projectType[] = [
-  {
-    num: "01",
-    category: "mern",
-    title: "project 1",
-    description: "Lorem ipsum dolor sit consectetur adipcising elit. Cupiditate magnam modi.",
-    stack: [{ name: "Html 5"}, { name: "Css 3"}, {name: "Javascript"}],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: ""
-  },
-  {
-    num: "02",
-    category: "frontend",
-    title: "project 2",
-    description: "Lorem ipsum dolor sit consectetur adipcising elit. Cupiditate magnam modi.",
-    stack: [{ name: "Html 5"}, { name: "Css 3"}, {name: "Javascript"}],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: ""
-  },
-  {
-    num: "03",
-    category: "frontend",
-    title: "project 3",
-    description: "Lorem ipsum dolor sit consectetur adipcising elit. Cupiditate magnam modi.",
-    stack: [{ name: "Html 5"}, { name: "Css 3"}, {name: "Javascript"}],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: ""
-  },
-  {
-    num: "04",
-    category: "frontend",
-    title: "project 4",
-    description: "Lorem ipsum dolor sit consectetur adipcising elit. Cupiditate magnam modi.",
-    stack: [{ name: "Html 5"}, { name: "Css 3"}, {name: "Javascript"}],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: ""
-  },
-]
+import { projects } from "@/utils/data/projectData";
+import { projectType } from "@/types/projectTypes";
 
 const Work = () => {
   const [project, setProject] = useState<projectType>(projects[0]);
@@ -156,7 +100,7 @@ const Work = () => {
                         <Image
                           src={project.image}
                           fill
-                          className="object-cover"
+                          className="object-contain"
                           alt=""
                         />
                       </div>

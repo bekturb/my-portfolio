@@ -2,30 +2,7 @@
 
 import React from 'react';
 import CountUp from "react-countup";
-
-interface IStats {
-    num: number,
-    text: string
-}
-
-const stats: IStats[] = [
-    {
-        num: 3,
-        text: "Years of experience"
-    },
-    {
-        num: 7,
-        text: "Projects completed"
-    },
-    {
-        num: 8,
-        text: "Technologies mastered"
-    },
-    {
-        num: 80,
-        text: "Code commits"
-    }
-]
+import {stats} from "@/utils/data/statsData"
 
 const Stats = () => {
   return (

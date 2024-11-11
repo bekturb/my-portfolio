@@ -3,40 +3,7 @@
 import { BsArrowDownRight } from "react-icons/bs";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
-interface IServices {
-  num: string,
-  title: string,
-  description: string,
-  href: string,
-}
-
-const services: IServices[] = [
-  {
-    num: "01",
-    title: "Web Development",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, ad?",
-    href: "",
-  },
-  {
-    num: "02",
-    title: "UI/UX Design",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, ad?",
-    href: "",
-  },
-  {
-    num: "03",
-    title: "Logo Design",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, ad?",
-    href: "",
-  },
-  {
-    num: "04",
-    title: "SEO",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, ad?",
-    href: "",
-  },
-]
+import  { services }  from "@/utils/data/servicesData"
 
 const Services = () => {
   return (
