@@ -49,7 +49,7 @@ export const projects: projectType[] = [
       github: "https://github.com/bekturb/zeon-test-project.git"
     },
     {
-      num: "04",
+      num: "05",
       category: "frontend",
       title: "project 4",
       description: `I built a calculator application that provides precise 
